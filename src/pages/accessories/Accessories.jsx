@@ -1,11 +1,10 @@
 import React from 'react'
-
-import AccessoriesListing from '../../components/accessoriesListing/AccessoriesListing'
+import ProductListing from '../../components/productListing/ProductListing'
 
 function Accessories() {
   return (
     <div>
-      <AccessoriesListing />
+      <ProductListing categoryId="2" />
     </div>
   )
 }

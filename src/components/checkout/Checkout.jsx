@@ -37,7 +37,7 @@ const Checkout = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-6">
-      <h2 className="text-2xl font-bold mb-4">Checkout</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Checkout</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
@@ -91,20 +91,14 @@ const Checkout = () => {
                 />
                 <div className="flex-1">
                   <p className="font-bold">{item.name}</p>
-                  <p className="text-gray-600">${item.price}</p>
+                  <p className="text-red-600">${item.price}</p>
                 </div>
-                <button
-                  onClick={() => handleRemoveItem(item.id)}
-                  className="text-red-600 text-sm"
-                >
-                  Remove
-                </button>
               </div>
             ))
           ) : (
             <p>Your cart is empty.</p>
           )}
-          {/* <p className="font-bold mt-2">Total: ${totalPrice.toFixed(2)}</p> */}
+          <p className="font-bold mt-2 text-lg">Total Price: <span className="text-red-600">${cartItems.reduce((total, item) => total + item.price * (item.quantity || 1), 0).toFixed(2)}</span></p>
         </div>
 
         <button
