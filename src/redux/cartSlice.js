@@ -20,7 +20,7 @@ const cartSlice = createSlice({
             }
 
             state.totalQuantity += 1;
-            state.totalPrice += action.payload.price; // Fix: Correctly accumulate total price
+            state.totalPrice += +action.payload.price; // Fix: Correctly accumulate total price
         },
 
         removeFromCart: (state, action) => {
@@ -29,7 +29,7 @@ const cartSlice = createSlice({
             if (itemIndex !== -1) {
                 const item = state.cartItems[itemIndex];
                 state.totalQuantity -= item.quantity;
-                state.totalPrice -= item.price * item.quantity;
+                state.totalPrice -= +item.price * item.quantity;
                 state.cartItems.splice(itemIndex, 1);
             }
         },
@@ -39,7 +39,7 @@ const cartSlice = createSlice({
             if (item) {
                 item.quantity += 1;
                 state.totalQuantity += 1;
-                state.totalPrice += item.price;
+                state.totalPrice += +item.price;
             }
         },
 
@@ -48,7 +48,7 @@ const cartSlice = createSlice({
             if (item && item.quantity > 1) {
                 item.quantity -= 1;
                 state.totalQuantity -= 1;
-                state.totalPrice -= item.price;
+                state.totalPrice -= +item.price;
             }
         },
 

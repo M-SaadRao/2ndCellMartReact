@@ -52,7 +52,7 @@ function App() {
           table: "tblproducts",
         });
 
-        console.log(response);
+        
         if (response.data.success) {
            dispatch(setProducts(response.data.data));
         } else {

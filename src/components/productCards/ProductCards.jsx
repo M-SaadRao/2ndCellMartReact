@@ -13,7 +13,7 @@ function ProductCard({ product }) {
       {/* Product Details */}
       <div className="text-center mt-3">
         <p className="text-sm sm:text-lg font-semibold">
-          {product.name} <span className="text-gray-500"><br />({product.color})</span>
+          {product.name} <span className="text-gray-500"><br />{product.color}</span>
         </p>
         <p className="text-red-600 font-semibold text-lg">${product.price}</p>
       </div>

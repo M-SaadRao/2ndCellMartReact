@@ -1,17 +1,25 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState,useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {addToCart} from "../../redux/cartSlice";
-import productData from "../../utils/productsData";
 import Container from "../../components/container/Container";
 import { notification } from "antd";
 
 function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const product = productData.find((p) => p.id === parseInt(id));
+  const[product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [api, contextHolder] = notification.useNotification();
+  const products = useSelector(state=>state.products.products);
+  
+  useEffect(()=>{
+    if(products && products.length > 0){
+      const prod = products.find((p) => parseInt(p.id) === parseInt(id));
+      setProduct(prod);
+
+    }
+  },[products]);
 
   if (!product) {
     return (
@@ -97,7 +105,7 @@ function ProductDetails() {
           <h3 className="text-lg sm:text-2xl font-semibold mb-3 text-red-600">
             Product Description
           </h3>
-          <p className="text-gray-700 text-sm sm:text-base">{product.desc}</p>
+          <p className="text-gray-700 text-sm sm:text-base">{product.description}</p>
         </div>
       </div>
     </Container>
