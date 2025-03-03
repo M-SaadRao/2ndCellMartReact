@@ -31,12 +31,14 @@ function ProductListing({categoryId}) {
   return (
     <Container>
 
+      <div className="flex justify-end items-center mb-6">
       <input 
-      className="border-2 border-black"
+      className="border-2 border-black w-[300px] p-2 text-red-600"
       type="text"
       value={query}
       placeholder="Search product by name"
       onChange={(e)=> setQuery(e.target.value)} />
+      </div>
       {/* <div className="text-center text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-9">
         #Products
       </div> */}

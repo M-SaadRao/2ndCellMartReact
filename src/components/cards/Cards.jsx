@@ -6,7 +6,7 @@ import pickup from "../../../public/images/icon/pickup.png";
 
 function Cards() {
   return (
-    <div className="bg-gray-100 mt-5">
+    <div className="bg-gray-100 mt-[60px]">
       <Container className="">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-center gap-4 border-[1px] p-4 rounded-xl">

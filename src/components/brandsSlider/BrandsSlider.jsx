@@ -29,7 +29,7 @@ function BrandsSlider() {
     <div className="border-t border-gray-200 py-10">
       <div className="container mx-auto ">
         <Swiper
-          slidesPerView={2}
+          slidesPerView={3}
           breakpoints={{
             640: { slidesPerView: 3 },
             768: { slidesPerView: 4 },

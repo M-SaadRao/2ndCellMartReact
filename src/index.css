@@ -12,9 +12,9 @@ html {
 }
 
 .heading-1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl  leading-[1.25] font-semibold;
+    @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.25] font-semibold;
 }
 .heading-2 {
-    @apply text-5xl sm:text-6xl text-red-600 font-bold mt-2;
+    @apply text-3xl sm:text-6xl text-red-600 font-bold mt-2;
 }
 

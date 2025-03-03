@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="bg-gray-800 ">
+    <div className="bg-gray-800">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-center items-center ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 justify-center items-center py-5">
           {/* Logo and Description */}
           <div>
             <div className="w-[140px]">

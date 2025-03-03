@@ -89,7 +89,7 @@ const Cart = () => {
 
               <div className="flex flex-col w-[150px]">
                 <button
-                  className="bg-green-600 text-white p-2 mt-3 rounded"
+                  className="bg-green-600 text-white p-2 mt-3 rounded mb-5"
                   onClick={() => navigate("/checkout")} // Navigate to CheckoutPage
                 >
                   Checkout
